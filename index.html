@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/main_style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="path/to/lightbox.css" rel="stylesheet">
+	<title>A Pizza Lover's Guide to the United States</title>
+</head>
+
+<body>
+	<a class="skip-main" href="#content">Skip to main content</a>
+	<header>
+		<nav>
+			<ul class="nav">
+				<li><a class="current" href='index.html'>Home</a></li>
+				<li><a href="east_coast_pizza.html">East Coast Pizza</a></li>
+				<li><a href="midwest_pizza.html">Midwest Pizza</a></li>
+				<li><a href="southern_pizza.html">Southern Pizza</a></li>
+				<li><a href="about_the_contributors.html">Contributors</a></li>
+			</ul>
+		</nav>
+		<h1>Welcome to A Pizza Lover's Guide to the United States!</h1>	
+		</header>
+		<main id="content">
+		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite images below. </div>
+			<!-- Image used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="images/pp5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 14</div>
+      <img src="images/pp5.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 14</div>
+      <img src="images/pp9.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 14</div>
+      <img src="images/pp16.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 14</div>
+      <img src="images/pp18.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 14</div>
+      <img src="images/pp3.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 14	</div>
+      <img src="images/pp8.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 14</div>
+      <img src="images/pp15.jpg" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 14</div>
+      <img src="images/pp12.jpg" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 /14</div>
+      <img src="images/pp6.jpg" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 14</div>
+      <img src="images/pp4.jpg" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 14</div>
+      <img src="images/pp7.jpg" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 14</div>
+      <img src="images/pp.jpg">
+    </div>
+
+       <div class="mySlides">
+      <div class="numbertext">13 / 14</div>
+      <img src="images/pp17.jpg">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">14 / 14</div>
+      <img src="images/pp11.jpg">
+    </div>
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="images/pp5.jpg" onclick="currentSlide(1)" alt="Can every night be like this?">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp9.jpg" onclick="currentSlide(2)" alt="How to eat pizza with style and class.">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp16.jpg" onclick="currentSlide(3)" alt="The 3 stages of devouring a pizza.">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp18.jpg" onclick="currentSlide(4)" alt="A mouthful of pizza.">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp3.jpg" onclick="currentSlide(5)" alt="So much Domino's, so little time.">
+    </div>
+
+ <div class="column">
+      <img class="demo" src="images/pp8.jpg" onclick="currentSlide(6)" alt="Please let me enjoy some of that pizza behind me!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp15.jpg" onclick="currentSlide(7)" alt="A whole pizza just for me!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp12.jpg" onclick="currentSlide(8)" alt="You won't find another dog as talented as me.">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp6.jpg" onclick="currentSlide(9)" alt="I'm sure they won't notice if I just take a little lick!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp4.jpg" onclick="currentSlide(10)" alt="Will you be my valentine?">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp7.jpg" onclick="currentSlide(11)" alt="I love pizza so much that I tried to become pizza!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp.jpg" onclick="currentSlide(12)" alt="What tricks can I do to earn myself that last piece?">
+    </div>
+
+     <div class="column">
+      <img class="demo" src="images/pp17.jpg" onclick="currentSlide(13)" alt="This pizza might be as big as my face, but I'm still going to eat all of it!">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/pp11.jpg" onclick="currentSlide(14)" alt="I can already taste the meaty pepperoni!">
+    </div>
+  </div>
+</div>
+
+			<div class="description">If you want to see more puppies eating pizza, this <a href="https://www.urdogs.com/16-dogs-who-are-clearly-obsessed-with-pizza/">site</a> has many cute pictures with hilarious captions. </div>
+
+	</main>
+	
+
+	<footer>
+		<a href="https://www.instagram.com/rachrich616/?hl=en"><i class="fab fa-instagram"  aria-label="Instagram"></i></a>   
+		<a href="https://twitter.com/rachrich682"><i class="fab fa-twitter-square" aria-label="Twitter"></i></a>   
+		<a href="https://open.spotify.com/user/4rocks32?si=kuVCymlZSuGELP9fYWPQOQ"><i class="fab fa-spotify" aria-label="Spotify"></i></a>
+	</footer>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="path/to/lightbox.js"></script>
+	<script>
+// Open the Modal
+	function openModal() {
+		document.getElementById('myModal').style.display = "block";
+	}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+	</body>
+</html>
+
+
