@@ -874,3 +874,13 @@ img.hover-shadow {
     text-align: left;
     margin-left: 12px;
   }
+
+#video1 {
+  width: 1600px;
+  height: 1600px;
+}
+#playpausebutton{
+  width: 400px;
+  height: 200px;
+  font-size: 100px;
+}
