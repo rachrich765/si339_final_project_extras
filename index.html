@@ -28,8 +28,9 @@
 		<h1>Welcome to A Pizza Lover's Guide to the United States!</h1>	
 		</header>
 		<main id="content">
-		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite images below. </div>
-			<!-- Image used to open the lightbox -->
+		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite pictures that can be viewed as a slideshow (click image below). </div>
+			
+  <!-- Image used to open the lightbox -->
 <div class="row">
   <div class="column">
     <img src="images/pp5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
@@ -181,7 +182,9 @@
 </div>
 
 			<div class="description">If you want to see more puppies eating pizza, this <a href="https://www.urdogs.com/16-dogs-who-are-clearly-obsessed-with-pizza/">site</a> has many cute pictures with hilarious captions. </div>
+      <div class="description">. </div>
 
+        <div id="video-placeholder"></div>
 	</main>
 	
 
@@ -257,6 +260,92 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+</script>
+     <script src="https://www.youtube.com/iframe_api"></script>
+<script>
+     var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+        width: 1500,
+        height: 1500,
+        videoId: 'HCAPjIVOdJw',
+        playerVars: {
+            color: '######',
+        },
+        events: {
+            onReady: initialize
+        }
+    });
+}
+function initialize(){
+
+    // Update the controls on load
+    updateTimerDisplay();
+    updateProgressBar();
+
+    // Clear any old interval.
+    clearInterval(time_update_interval);
+
+    // Start interval to update elapsed time display and
+    // the elapsed part of the progress bar every second.
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+        updateProgressBar();
+    }, 1000)
+
+}
+// This function is called by initialize()
+function updateTimerDisplay(){
+    // Update current time text display.
+    $('#current-time').text(formatTime( player.getCurrentTime() ));
+    $('#duration').text(formatTime( player.getDuration() ));
+}
+
+function formatTime(time){
+    time = Math.round(time);
+
+    var minutes = Math.floor(time / 60),
+    seconds = time - minutes * 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    return minutes + ":" + seconds;
+}
+$('#progress-bar').on('mouseup touchend', function (e) {
+    // Calculate the new time for the video.
+    // new time in seconds = total duration in seconds * ( value of range input / 100 )
+    var newTime = player.getDuration() * (e.target.value / 100);
+
+    // Skip video to new time.
+    player.seekTo(newTime);
+
+});
+// This function is called by initialize()
+function updateProgressBar(){
+    // Update the value of our progress bar accordingly.
+    $('#progress-bar').val((player.getCurrentTime() / player.getDuration()) * 100);
+}
+
+$('#play').on('click', function () {
+    player.playVideo();
+});
+$('#pause').on('click', function () {
+    player.pauseVideo();
+})
+$('#mute-toggle').on('click', function() {
+    var mute_toggle = $(this);
+
+    if(player.isMuted()){
+        player.unMute();
+        mute_toggle.text('volume_up');
+    }
+    else{
+        player.mute();
+        mute_toggle.text('volume_off');
+    }
+});
+
 </script>
 	</body>
 </html>
