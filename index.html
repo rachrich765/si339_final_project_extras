@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/main_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -13,15 +14,17 @@
 <body>
 	<a class="skip-main" href="#content">Skip to main content</a>
 	<header>
-		<nav>
-			<ul class="nav">
-				<li><a class="current" href='index.html'>Home</a></li>
-				<li><a href="east_coast_pizza.html">East Coast Pizza</a></li>
-				<li><a href="midwest_pizza.html">Midwest Pizza</a></li>
-				<li><a href="southern_pizza.html">Southern Pizza</a></li>
-				<li><a href="about_the_contributors.html">Contributors</a></li>
-			</ul>
-		</nav>
+		<div class="topnav" id="myTopnav">
+				<a class="current" href="javascript:void(0)">Home</a>
+				<a href="east_coast_pizza.html">East Coast Pizza</a>
+				<a href="midwest_pizza.html">Midwest Pizza</a>
+				<a href="southern_pizza.html">Southern Pizza</a>
+				<a href="about_the_contributors.html">Contributors</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+
 		<h1>Welcome to A Pizza Lover's Guide to the United States!</h1>	
 		</header>
 		<main id="content">
@@ -231,7 +234,30 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+window.onscroll = function() {myFunction()};
 
+var navbar = document.getElementById("myTopnav");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 	</body>
 </html>
 

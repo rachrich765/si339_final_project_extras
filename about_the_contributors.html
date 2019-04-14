@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/main_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -12,51 +13,64 @@
 <body>
 	<a class="skip-main" href="#content">Skip to main content</a>
 	<header>
-		<nav>
-			<ul>
-				<li><a href='index.html'>Home</a></li>
-				<li><a href="east_coast_pizza.html">East Coast Pizza</a></li>
-				<li><a href="midwest_pizza.html">Midwest Pizza</a></li>
-				<li><a href="southern_pizza.html">Southern Pizza</a></li>
-				<li><a class="current" href="about_the_contributors.html">Contributors</a></li>
-			</ul>
-		</nav>
+		<div class="topnav" id="myTopnav">
+				<a href='index.html'>Home</a>
+				<a href="east_coast_pizza.html">East Coast Pizza</a>
+				<a href="midwest_pizza.html">Midwest Pizza</a>
+				<a href="southern_pizza.html">Southern Pizza</a>
+				<a class="current" href="javascript:void(0)">Contributors</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+			
 		<h1>About the Contributors</h1>
 	</header>
 
 	<main id="content">
-		<div class="row-c">
-			<div class="item-c">
-				<h2 class="item-c-heading">Rachel</h2>
-				<p class="item-c-image">
+		<section class="columns">
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
 					<img src = "images/contributors/rachel.JPG" alt ="Rachel"/>
-				</p>
-				<p>I am a senior at the University of Michigan (Ann Arbor) majoring in Information Analysis and minoring in Spanish. After graduation, I will either begin the Masters in Management Program at the Stephen M. Ross School of Business or I will be working full-time in either New York City or Chicago. When I'm not indulging in pizza, I enjoy watching Brooklyn Nine-Nine, going to baseball games, and creating Spotify playlists.</p>  
+				</div>
+				<div class="flip-card-back">
+					<h1>Rachel</h1> 
+					<p><b>Current endeavor:</b> Senior @ University of Michigan</p> 
+					<p><b>Interests:</b> "Brooklyn Nine-Nine", baseball, creating playlists </p>
+					<p><b>Future endeavors:</b> Masters in Management @ Ross </p>
+				</div>
 			</div>
-
-			<div class="item-c">
-				
-				<h2 class="item-c-heading">
-					Harry
-				</h2>	
-				<p class="item-c-image">
-					<img src = "images/contributors/harry.JPG" alt ="Harry"/>    
-				</p>
-				<p>Harry is a junior at the University of Michigan (Ann Arbor) majoring in Computer Science and minoring in Economics. This summer, he is working for EY in Nashville as a Software Development intern. When he isn't (voluntarily or involuntarily) taking part in my pizza-seeking endeavors, Harry can be found playing Super Smash Bros. Ultimate, watching Black Mirror, or attending a New York Yankees Game.</p> 
 			</div>
-
-			<div class="item-c">
-				<div class="item-c-al">
-				<h2 class="item-c-heading">
-					Alex
-				</h2>
-				<p class="item-c-image">
-					<img src = "images/contributors/ap.jpg" alt ="Alex"/> 
-				</p>
-				<p>Alex graduated from the University of Michigan (Ann Arbor) in 2017 and now works as a full-time software developer in Detroit. Alex likes playing Mario Kart, seeing Broadway musicals, and watching The Good Place.</p>
+	
+				<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src = "images/contributors/harry.JPG" alt ="Harry"/>
+				</div>
+				<div class="flip-card-back">
+					<h1>Harry</h1> 
+					<p><b>Current endeavor:</b> Junior @ University of Michigan</p> 
+					<p><b>Interests:</b> "Brooklyn Nine-Nine", New York sports teams, Super Smash Bros</p>
+					<p><b>Future endeavors:</b> Software Development Internship @ EY </p>
+				</div>
+			</div>
+			</div>
+		
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src = "images/contributors/ap.jpg"  alt ="Alex"/>
+				</div>
+				<div class="flip-card-back">
+					<h1>Alex</h1> 
+					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> 
+					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p>
+					<p><b>Future endeavors:</b> Software Developer in NYC </p>
+			</div>
 			</div>
 		</div>
-		</div>
+	</section>
 	</main>
 
 	<footer>
@@ -64,5 +78,29 @@
 		<a href="https://twitter.com/rachrich682"><i class="fab fa-twitter-square" aria-label="Twitter"></i></a>   
 		<a href="https://open.spotify.com/user/4rocks32?si=kuVCymlZSuGELP9fYWPQOQ"><i class="fab fa-spotify" aria-label="Spotify"></i></a>
 	</footer>
+	<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("myTopnav");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>
