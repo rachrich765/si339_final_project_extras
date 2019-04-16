@@ -34,7 +34,7 @@
 		<section class="columns">
 	<div class="column-al">
 			<h3>1.<a href="http://www.startavern.net/"> Star Tavern </a> <br> Orange, New Jersey</h3>
-				<p>The <a href="https://en.wikipedia.org/wiki/New_York-style_pizza">New York style</a> thin crust is so good, it might even be better than any thin crust pizza he's had in New York. The other feature of this pizza that stands out to Alex are the pepperonis. Star Tavern has old-school mini pepperonis that shrink into crispy, bite size pepperonis. It was also voted the 2nd best pizza across the entire United States by The Daily Meal in 2015.</p>
+				<p>The <a href="https://www.thespruceeats.com/what-is-new-york-style-pizza-2708764">New York style</a> thin crust is so good, it might even be better than any thin crust pizza he's had in New York. The other feature of this pizza that stands out to Alex are the pepperonis. Star Tavern has old-school mini pepperonis that shrink into crispy, bite size pepperonis. It was also voted the 2nd best pizza across the entire United States by The Daily Meal in 2015.</p>
 					<img src = "images/East_Coast_Pizza/starpizza_nj.jpg" alt ="startavern_pizza"/>
 				<figure>
 					<figcaption class="ratings">
@@ -133,6 +133,51 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+</script>
+<script>
+	document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "East Coast Pizza"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 70);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 70000);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+
 </script>
 </body>
 </html>

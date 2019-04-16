@@ -35,7 +35,7 @@
 					<img src = "images/contributors/rachel.JPG" alt ="Rachel"/>
 				</div>
 				<div class="flip-card-back">
-					<h1>Rachel</h1> 
+					<h2>Rachel</h2> 
 					<p><b>Current endeavor:</b> Senior @ University of Michigan</p> 
 					<p><b>Interests:</b> "Brooklyn Nine-Nine", baseball, creating playlists </p>
 					<p><b>Future endeavors:</b> Masters in Management @ Ross </p>
@@ -49,7 +49,7 @@
 					<img src = "images/contributors/harry.JPG" alt ="Harry"/>
 				</div>
 				<div class="flip-card-back">
-					<h1>Harry</h1> 
+					<h2>Harry</h2> 
 					<p><b>Current endeavor:</b> Junior @ University of Michigan</p> 
 					<p><b>Interests:</b> "Brooklyn Nine-Nine", New York sports teams, Super Smash Bros</p>
 					<p><b>Future endeavors:</b> Software Development Internship @ EY </p>
@@ -63,7 +63,7 @@
 					<img src = "images/contributors/ap.jpg"  alt ="Alex"/>
 				</div>
 				<div class="flip-card-back">
-					<h1>Alex</h1> 
+					<h2>Alex</h2> 
 					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> 
 					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p>
 					<p><b>Future endeavors:</b> Software Developer in NYC </p>
@@ -90,10 +90,8 @@ function myFunction() {
 </script>
 <script>
 window.onscroll = function() {myFunction()};
-
 var navbar = document.getElementById("myTopnav");
 var sticky = navbar.offsetTop;
-
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
@@ -102,5 +100,51 @@ function myFunction() {
   }
 }
 </script>
+<script>
+	document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "About the Contributors"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 70);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+
+</script>
+
 </body>
 </html>
