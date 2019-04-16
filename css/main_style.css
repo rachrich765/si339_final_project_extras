@@ -884,3 +884,50 @@ img.hover-shadow {
   height: 200px;
   font-size: 100px;
 }
+
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.broadcast {
+  color: white;
+  display: flex;
+  text-align: center;
+  margin-top: -50px;
+}
+.broadcast {
+  background: #444;
+  position: relative;
+  font-weight: bold;
+}
+.broadcast a {
+  color: #f3b823;
+  text-decoration: none;
+
+}
+.broadcast .hide-broadcast {
+  position: absolute;
+  right: 20px;
+}
+.broadcast .hide-broadcast svg {
+  fill: white;
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+}
+.broadcast .hide-broadcast .hide-broadcast-target {
+  width: 240px;
+  height: 240px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+
+}
+.broadcast .hide-broadcast:hover .hide-broadcast-target {
+  background: rgba(255, 255, 255, .9);
+}
+.broadcast .hide-broadcast:hover .hide-broadcast-target svg {
+  fill: #444;
+}
