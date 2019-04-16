@@ -822,18 +822,18 @@ img.hover-shadow {
 
 .flip-card {
   background-color: transparent;
-  width: 900px;
-  height: 900px;
+  width: 1500px;
+  height: 1500px;
   perspective: 1000px;
   font-size: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 95px;
+  margin-right: 95px;
   display: grid;
   float: left;
 }
 .flip-card img{
-  width: 900px;
-  height: 900px;
+  width: 1500px;
+  height: 1500px;
 }
 
 .flip-card-inner {
@@ -873,6 +873,12 @@ img.hover-shadow {
 .flip-card-back p{
     text-align: left;
     margin-left: 12px;
+    font-size: 50px;
+    color: #DDF2EA;
+  }
+  .flip-card-back h1{
+    font-size: 150px;
+    color: #0AF39D;
   }
 
 #video1 {
@@ -891,7 +897,7 @@ img.hover-shadow {
   margin: 0 auto;
 }
 .broadcast {
-  color: white;
+  color: #FFFFFF;
   display: flex;
   text-align: center;
   margin-top: -50px;
@@ -900,6 +906,7 @@ img.hover-shadow {
   background: #444;
   position: relative;
   font-weight: bold;
+  font-size: 45px;
 }
 .broadcast a {
   color: #f3b823;
@@ -911,7 +918,7 @@ img.hover-shadow {
   right: 20px;
 }
 .broadcast .hide-broadcast svg {
-  fill: white;
+  fill: #FFFFFF;
   width: 100px;
   height: 100px;
   position: relative;
