@@ -31,6 +31,8 @@
 		<div class="description">Since I've only been on the East Coast for a cumulative total of 12 hours, I interviewed my best friend, Alex, and boyfriend, Harry, about their opinions of the best East Coast pizza places.</div>
 
 		<h2>Alex's New Jersey Pizza Rankings</h2>
+		<button class="accordion">Click to show/hide Alex's New Jersey Pizza Rankings</button>
+		<div class="panel">
 		<section class="columns">
 	<div class="column-al">
 			<h3>1.<a href="http://www.startavern.net/"> Star Tavern </a> <br> Orange, New Jersey</h3>
@@ -73,9 +75,12 @@
 			</figure>
 		</div>
 	</section>
+</div>
 	<img class="divider" src = "images/pp14.gif" alt ="pug_eats_pizza"/>
 	
 	<h2>Harry's New York Pizza Rankings</h2>
+	<button class="accordion-h">Click to show/hide Harry's New York Pizza Rankings</button>
+		<div class="panel">
 		<section class="columns">
 	<div class="column-h">
 		<h3>1. <a href="https://www.salsmamaroneck.com/">Sal's Pizza</a> <br> Mamaroneck, New York</h3>
@@ -102,6 +107,7 @@
 		</figure>
 	</div>
 </section>
+</div>
 	
 </main>
 
@@ -179,5 +185,40 @@ function myFunction() {
 });
 
 </script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    // made these the opposite so that I could have them be shown by default
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "none") {
+      panel.style.display = "block";
+    } else {
+      panel.style.display = "none";
+    }
+  });
+}
+</script>
+<script>
+var acc = document.getElementsByClassName("accordion-h");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    // made these the opposite so that I could have them be shown by default
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "none") {
+      panel.style.display = "block";
+    } else {
+      panel.style.display = "none";
+    }
+  });
+}
+</script>
+
 </body>
 </html>
