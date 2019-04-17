@@ -199,13 +199,6 @@
  </video>
 
 
-
-
-  
-
-
-	
-
 	<footer>
 		<a href="https://www.instagram.com/rachrich616/?hl=en"><i class="fab fa-instagram"  aria-label="Instagram"></i></a>   
 		<a href="https://twitter.com/rachrich682"><i class="fab fa-twitter-square" aria-label="Twitter"></i></a>   
@@ -225,6 +218,12 @@ function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        document.getElementById('myModal').style.display = "none";
+    }
+};
 var slideIndex = 1;
 showSlides(slideIndex);
 
