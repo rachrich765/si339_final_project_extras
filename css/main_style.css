@@ -141,46 +141,7 @@ li {
   font-size: 50px;
 }
 
-/*skip to content*/
 
-/*mobile / ipad*/
-.skip-main {
-	 display: none;
-}
-
-/*laptop*/
-@media screen and (min-width:1200px) {
-  .skip-main {
-    position: absolute;
-    top: -1000px;
-    left: -1000px;
-    height: 1px;
-    width: 1px;
-    text-align: left;
-    overflow: hidden;
-  }
-}
-
-/*ipad and mobile*/
-a.skip-main:focus {
-      display: none;
-  }
-
-
-/*laptop*/
-@media screen and (min-width:1200px) {     
-  a.skip-main:focus {
-    left: 0; 
-    top: 0;
-    width: auto; 
-    height: auto; 
-    overflow: visible; 
-    z-index: 1;
-    color: #FFFFFF;
-    background-color: #F60909;
-    font-size: 58px;
-  }
-}
 
  /*footer*/
 
@@ -380,9 +341,34 @@ footer a .fa-twitter-square  {
   top: 0;
   width: 100%;
 }
-/*mobile*/
 
- /*flex layout east coast*/
+/*skip to content*/
+@media screen and (min-width:1200px) {
+  .skip-main {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+  }
+}
+
+/*laptop*/
+@media screen and (min-width:1200px) {     
+  a.skip-main:focus {
+    left: 0; 
+    top: 0;
+    width: auto; 
+    height: auto; 
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: #F60909;
+    font-size: 58px;
+  }
+}
+/*flex layout east coast*/
 
 /*mobile / default*/
 .columns {
@@ -420,7 +406,7 @@ footer a .fa-twitter-square  {
 /*laptop*/
 @media screen and (min-width:1200px) {
   .column-al {
-    border: 0.1px solid gray;
+    /*border: 0.1px solid gray;*/
   }
 }
 
@@ -497,7 +483,7 @@ footer a .fa-twitter-square  {
 /*laptop*/
 @media screen and (min-width:1200px) {
   .column-h {
-    border: 0.1px solid gray;
+    /*border: 0.05px solid lightgray;*/
   }
 }
 
@@ -820,7 +806,7 @@ img.hover-shadow {
 }
 
 
-.flip-card {
+/*.flip-card {
   background-color: transparent;
   width: 1500px;
   height: 1500px;
@@ -847,7 +833,7 @@ img.hover-shadow {
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotate3d(1, 1, 0, 180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -855,6 +841,7 @@ img.hover-shadow {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+
 }
 
 .flip-card-front {
@@ -866,7 +853,7 @@ img.hover-shadow {
 .flip-card-back {
   background-color: #2980b9;
   color: white;
-  transform: rotateY(180deg);
+   transform: rotate3d(1, 1, 0, 180deg);
   z-index: 1;
 
 }
@@ -882,7 +869,7 @@ img.hover-shadow {
     font-size: 150px;
     color: #0AF39D;
   }
- 
+*/ 
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -966,4 +953,137 @@ video {
 .active, .accordion-h:hover {
   background-color: #ccc; 
 }
+
+.top{
+  margin-top: 200px;
+  padding-top: 100px;
+}
+.top-ec{
+  margin-top: 200px;
+  padding-top: 200px;
+}
+
+
+.flip-card {
+      width: 1500px;
+ height: 1500px;
+   display: grid;
+  float: left;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.flip-card  div {
+    display: block;
+    width: 1500px;
+ height: 1500px;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-front img{
+ width: 1500px;
+ height: 1500px;
+}
+.flip-card-back {
+    background: blue;
+    transform: rotateY( 180deg );
+    width: 1500px;
+ height: 1500px;
+}
+.flip-card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+
+
+.flip-card-h {
+      width: 1500px;
+ height: 1500px;
+   display: grid;
+  float: left;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.flip-card-h  div {
+    display: block;
+    width: 1500px;
+ height: 1500px;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-h-front img{
+ width: 1500px;
+ height: 1500px;
+}
+.flip-card-h-back {
+    background: blue;
+    transform: rotateY( 180deg );
+    width: 1500px;
+ height: 1500px;
+}
+.flip-card-h.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.flip-card-a {
+      width: 1500px;
+ height: 1500px;
+   display: grid;
+  float: left;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.flip-card-a  div {
+    display: block;
+    width: 1500px;
+ height: 1500px;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-a-front img{
+ width: 1500px;
+ height: 1500px;
+
+}
+
+.flip-card-a-back {
+    background: blue;
+    transform: rotateY( 180deg );
+    width: 1500px;
+ height: 1500px;
+}
+.flip-card-a.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+button{
+font-size: 50px;
+
+}
+
 
