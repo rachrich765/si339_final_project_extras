@@ -28,13 +28,13 @@
 	</header>
 
 	<main id="content">
-		<section class="columns">
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src = "images/contributors/rachel.JPG" alt ="Rachel"/>
-				</div>
-				<div class="flip-card-back">
+
+	<section class="columns">
+		<div class="column-h">
+			<button onclick="flip()">Click to see more about Rachel!</button>
+  <div class="flip-card" onclick="flip()">
+    <div class="flip-card-front"><img src = "images/contributors/rachel.JPG" alt ="Rachel"/></div>
+    <div class="flip-card-back">
 					<h2>Rachel</h2> 
 					<p><b>Current endeavor:</b> Senior @ University of Michigan</p> 
 					<p><b>Interests:</b> "Brooklyn Nine-Nine", baseball, creating playlists </p>
@@ -42,13 +42,15 @@
 				</div>
 			</div>
 			</div>
-	
-				<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src = "images/contributors/harry.JPG" alt ="Harry"/>
-				</div>
-				<div class="flip-card-back">
+
+
+
+	<div class="column-h">
+		<button onclick="flip2()">Click to see more about Harry!</button>
+	<div class="flip-card-h" onclick="flip2()">
+
+    <div class="flip-card-h-front"><img src = "images/contributors/harry.JPG" alt ="Harry"/></div>
+    <div class="flip-card-h-back">
 					<h2>Harry</h2> 
 					<p><b>Current endeavor:</b> Junior @ University of Michigan</p> 
 					<p><b>Interests:</b> "Brooklyn Nine-Nine", New York sports teams, Super Smash Bros</p>
@@ -56,7 +58,28 @@
 				</div>
 			</div>
 			</div>
-		
+
+	
+
+
+
+	<div class="column-h">
+		<button onclick="flip3()">Click to see more about Alex!</button>
+	<div class="flip-card-a" onclick="flip3()">
+
+    <div class="flip-card-a-front"><img src = "images/contributors/ap.jpg"  alt ="Alex"/></div>
+    <div class="flip-card-a-back">
+					<h2>Alex</h2> 
+					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> 
+					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p>
+					<p><b>Future endeavors:</b> Software Developer in NYC </p>
+				</div>
+			</div>
+			</div>
+	
+</section>
+
+		<!-- 
 		<div class="flip-card">
 			<div class="flip-card-inner">
 				<div class="flip-card-front">
@@ -70,7 +93,7 @@
 			</div>
 			</div>
 		</div>
-	</section>
+	</section>= -->
 	</main>
 
 	<footer>
@@ -78,6 +101,8 @@
 		<a href="https://twitter.com/rachrich682"><i class="fab fa-twitter-square" aria-label="Twitter"></i></a>   
 		<a href="https://open.spotify.com/user/4rocks32?si=kuVCymlZSuGELP9fYWPQOQ"><i class="fab fa-spotify" aria-label="Spotify"></i></a>
 	</footer>
+		<script  src="jquery.js">
+  </script>
 	<script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -145,6 +170,17 @@ function myFunction() {
 });
 
 </script>
+<script>
 
+	function flip() {
+    $('.flip-card').toggleClass('flipped');
+}
+	function flip2() {
+    $('.flip-card-h').toggleClass('flipped');
+}
+function flip3() {
+    $('.flip-card-a').toggleClass('flipped');
+}
+</script>
 </body>
 </html>
