@@ -706,6 +706,12 @@ padding-right: 50px;
 /*/*
 /* Homepage gallery
    ===================*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
 
 .column {
     flex: 100%;
@@ -714,10 +720,15 @@ padding-right: 50px;
   }
 
 .column img {
-    width: 100%;
+    width: 195px;
+    height: 195px;
   }
 
-
+@media screen and (min-width:1200px){
+  .column img {
+    width: 35%;
+    height: 35%;
+    }}
 .divider {
   width: 100%;
 }
@@ -744,14 +755,38 @@ padding-right: 50px;
 }
 
 /* Create four equal columns that floats next to eachother */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
 .column {
   justify-content: center;
   width: 100%;
   float: left;
 }
-.column img {
-  width: 35%;
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait) {
+  .column img{
+    width: 350px;
+    height: 350px;
+
+  }
 }
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait) {
+  .column {
+    flex: 49%;
+    max-width: 49%;
+    padding-right: 5px;
+
+  }
+}
+
+
  @media only screen 
   and (max-device-width: 1024px) {
     .modal-content{
@@ -1119,9 +1154,6 @@ color:#DCEAE5 ;
   line-height: 120px;
 }}
 @media screen and (min-width:1200px){.flip-card-a.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }}
 
@@ -1131,4 +1163,13 @@ margin-left: -300px;
 margin-right: 300px;
 }}
 
+@media screen and (min-width:1200px){.mobile_images{
+  display: none;
+}}
+
+ @media only screen 
+  and (max-device-width: 768px) 
+  and (orientation: portrait){.laptop_images{
+    display: none;
+    }}
 
