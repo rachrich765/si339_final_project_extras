@@ -7,14 +7,16 @@ body {
 
 }
 
+
 /*mobile*/
 .description {
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-right: 40px;
-  margin-left: 40px;
-  font-size: 35px;
-  line-height: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 20px;
+
 }
 
 /*laptop*/
@@ -22,6 +24,7 @@ body {
   .description {
     font-size: 65px;
     line-height: 65px;
+
   }
 }
 
@@ -42,11 +45,13 @@ div {
 
 /*mobile*/
 h1 {
-  font-size: 90px;
-  color: #0EAC6F;
-  line-height: 100px;
-  margin-bottom: 30px;
-  margin-top: 100px;
+  font-size: 40px;
+  color: #0F21FA;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 
 }
 
@@ -54,8 +59,10 @@ h1 {
  @media screen and (min-width:1200px) {
   h1 {
     font-size: 95px;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
     line-height: 135px;
+    color: #0715BA;
+    margin-top: 80px;
   }
 }
 
@@ -64,38 +71,50 @@ h1 {
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) and (orientation: portrait){
     h1 {
-    font-size: 105px;
-    margin-bottom: 75px;
-    margin-top: 85px;
+    font-size: 95px;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    line-height: 95px;
   }
 }
 
 /*mobile / default*/
 h2 {
-  color: #369F64;
-  margin-top: 37px;
-  font-size:80px;
-  margin-bottom: 37px;
-  line-height: 60px;
+    color: #E12626;
+  margin-top: 10px;
+  font-size:35px;
+  margin-bottom: 10px;
+  line-height: 35px;
+
 }
 
 /*laptop*/
  @media screen and (min-width:1200px) { 
   h2 {
-    color: #E12626;
+
     margin-top: 80px;
     font-size:90px;
     margin-bottom: 80px;
     line-height: 75px;
   }
 }
+h2 a {
+  color : #1D2AC2;
+font-size: 25px;
+}
+ @media screen and (min-width:1200px) { 
+  h2 a {
+    color: #1D2AC2;
+    font-size: 85px;
+    line-height: 90px;
+    }}
 
 /*ipad*/
 @media screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) and (orientation: portrait){
     h2 {
-    color: #E12626;;
+    color: #E12626;
     margin-top: 80px;
     font-size:90px;
     margin-bottom: 80px;
@@ -103,17 +122,29 @@ h2 {
   }
 }
 
+
 /*mobile*/
 h3 {
   margin-top: 44px;
-  color: #369F64;
-  font-size: 50px; 
-  margin-top: 40px;
+color: #1D2AC2;;
+  font-size: 30px; 
+  margin-top: 20px;
   line-height: 70px;
   margin-bottom: 22px;
 }
 
 /*laptop*/
+h3 a {
+color : #1D2AC2;
+font-size: 25px;
+}
+h3 {
+  color: #E12626;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
 @media screen and (min-width: 1200px) { 
   h3 {
     margin-top: 50px;
@@ -124,6 +155,10 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1200px) { 
+  h3 a{
+     font-size: 75px; 
+}}
 
 nav{
   margin-bottom: 30px;
@@ -152,10 +187,9 @@ footer nav div{
 
 /*mobile*/
 .ratings{
-  font-size: 35px; 
+  font-size: 15px; 
   margin-bottom: -20px;
-  line-height: 41px;
-  margin-bottom: 41px;
+  line-height: 21px;
 }
 
 /*laptop*/
@@ -183,15 +217,18 @@ footer nav div{
 
 /*mobile / default*/
 .ratings .fa-pizza-slice {
-  font-size: 50px;
+  font-size: 15px;
   color:#E31824;
-  line-height: 65px;
+  line-height: 15px;
+  margin-top: -30px;
 }
 
 /*laptop*/
 @media screen and (min-width:1200px) { 
   .ratings .fa-pizza-slice  {
     font-size: 65px;
+    line-height: 85px;
+    margin-top: 30px;
   }
 }
 
@@ -206,7 +243,7 @@ footer nav div{
 
 /*mobile / default*/
 footer a .fa-spotify {
-  font-size:145px;
+  font-size:55px;
   color: #1DB954;
 }
 
@@ -228,7 +265,7 @@ footer a .fa-spotify {
 
 /*mobile / default*/
 footer a .fa-instagram  {
-  font-size: 155px;
+  font-size: 55px;
   color: #E4405F;
 }
 
@@ -250,7 +287,7 @@ footer a .fa-instagram  {
 
 /*mobile / default*/
 footer a .fa-twitter-square  {
-  font-size: 155px;
+  font-size: 55px;
   color: #55ACEE;
 }
 
@@ -287,27 +324,32 @@ footer a .fa-twitter-square  {
  /*header*/
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #818392;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #F5F6F9;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+font-size: 50px;
 }
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait){
+    .topnav a {
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #000000;
+    }}
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #7F88F3;
   color: black;
-}
+  font-size: 50px;
 
-.active {
-  background-color: #4CAF50;
-  color: white;
 }
 
 .topnav .icon {
@@ -361,8 +403,8 @@ padding-right: 50px;
     position: absolute;
     top: -1000px;
     left: -1000px;
-    height: 1px;
     width: 1px;
+    height: 1px; 
     text-align: left;
     overflow: hidden;
   }
@@ -371,23 +413,28 @@ padding-right: 50px;
 /*laptop*/
 @media screen and (min-width:1200px) {     
   a.skip-main:focus {
+     outline: none;
     left: 0; 
     top: 0;
-    width: auto; 
-    height: auto; 
-    overflow: visible; 
-    z-index: 1;
+    width: 300px;
+    height: 100px; 
+    overflow: hidden;
     color: #FFFFFF;
     background-color: #F60909;
     font-size: 58px;
+    margin-top: 180px;
+
   }
+}
+[tabindex] {
+   outline: none !important;
 }
   @media screen and (max-width:768px) {.skip-main {
     display: none;
   }
   }
   .current {
-  background-color: #4CAF50;
+  background-color: #7F88F3;
   color: white;
 }
 /*flex layout east coast*/
@@ -418,28 +465,24 @@ padding-right: 50px;
     }
 }
 
-
 /*mobile /ipad*/
 .column-al {
   flex: 0.33;
   flex-flow: row wrap;
 }
 
-/*laptop*/
-@media screen and (min-width:1200px) {
-  .column-al {
-    /*border: 0.1px solid gray;*/
-  }
-}
+
 
 
 
 /*mobile / default*/
 .column-al p{
-   margin-left: 55px;
-  margin-right: 55px;
-  font-size: 25px;
-  line-height: 35px;
+   margin-left: 12px;
+  margin-right: 12px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: -5px;
+    text-align: center;
 }
 
 /*laptop*/
@@ -450,7 +493,7 @@ padding-right: 50px;
     font-size: 65px;
     line-height: 75px;
     margin-bottom: 55px;
-    text-align:left;
+  
   }
 }
 
@@ -470,9 +513,10 @@ padding-right: 50px;
 
 /*mobile*/
 .column-al img{
- width: 550px;
- height: 550px;
- margin-top: 45px;
+ width: 195px;
+ height: 195px;
+ margin-top: 5px;
+ margin-bottom: -15px;
 }
 
 /*ipad*/
@@ -502,20 +546,16 @@ padding-right: 50px;
    flex-flow: row wrap;
 }
 
-/*laptop*/
-@media screen and (min-width:1200px) {
-  .column-h {
-    /*border: 0.05px solid lightgray;*/
-  }
-}
 
 
 /*mobile*/
 .column-h p{
-  margin-left: 55px;
-  margin-right: 55px;
-  font-size: 25px;
-  line-height: 35px;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: -5px;
+   text-align: center;
 }
 
 /*laptop*/
@@ -526,7 +566,7 @@ padding-right: 50px;
     font-size: 65px;
     line-height: 75px;
     margin-bottom: 55px;
-    text-align:left;
+
   }
 }
 
@@ -546,8 +586,8 @@ padding-right: 50px;
 
 /*mobile / default*/
 .column-h img{
- width: 550px;
- height: 550px;
+ width: 195px;
+ height: 195px;
 }
 
 /*ipad*/
@@ -568,7 +608,6 @@ padding-right: 50px;
     }
 }
 
- /*flex layout contributors*/
 
 /*laptop*/
 @media screen and (min-width:1200px){
@@ -865,19 +904,17 @@ padding-right: 50px;
   color: #FFFFFF;
   display: flex;
   text-align: center;
-  margin-top: -50px;
-}
-}
-@media screen and (min-width:1200px){.broadcast {
-  background: #444;
+  margin-top: 80px;
+    background: #EC2916;
   position: relative;
   font-weight: bold;
   font-size: 45px;
 }
 }
+
 @media screen and (min-width:1200px){.broadcast a {
-  color: #f3b823;
-  text-decoration: none;
+  color: #FFFFFF;
+  /*text-decoration: none;*/
 }
 }
 @media screen and (min-width:1200px){.broadcast .hide-broadcast {
@@ -912,6 +949,13 @@ padding-right: 50px;
     display: none;
   }
 }
+ @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){ .accordion-h {
+    display: none;
+  }
+}
  .accordion { /*background-color: #eee;*/
   color: #444;
   cursor: pointer;
@@ -938,11 +982,10 @@ padding-right: 50px;
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #7F88F3; 
+  color: #F5F6F9  ;
 }
-.active, .accordion-h:hover {
-  background-color: #ccc; 
-}
+
 
 
 @media screen and (min-width:1200px){.flip-card {
