@@ -34,15 +34,47 @@
 		</header>
 		<main id="content" tabindex="-1">
 		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite pictures that can be viewed as a slideshow below. </div>
-    <div class='top'>
+    
+      <div class="mobile_images">
+<div class="row"> 
+        <div class="column">      
+          <img src="images/pp5.jpg" alt="pug dreaming of pizza">
+          <img src="images/pp9.jpg" alt="pug eating pizza on a fancy plate">
+           <img src="images/pp16.jpg" alt="3 pictures of a black boxer eating pizza">
+           <img src="images/pp18.jpg" alt="black lab with a mouthful of pizza">
+        </div>
+      <div class="column">
+          <img src="images/pp3.jpg" alt="pug surounded by pizza from Dominos">
+          <img src="images/pp8.jpg" alt="pug with pizza behind him">
+          <img src="images/pp15.jpg" alt="bichon wanting to eat pizza">
+          <img src="images/pp13.jpg" alt="golden retriever with pizza">
+        </div>
+        <div class="column">
+          <img src="images/pp6.jpg" alt = "tiny black pug licking pizza">
+          <img src="images/pp4.jpg" alt="pug with heart shaped pizza">
+         <img src="images/pp7.jpg" alt="pug with pizza box stuck on his head">
+         <img src="images/pp12.jpg" alt="dog chef making pizza">
+          </div>
+        <div class="column">
+           <img src="images/pp.jpg" alt="pug staring at pizza slice">
+           <img src="images/pp17.jpg" alt="puppy eating puppy-sized pizza">
+          <img src="images/pp11.jpg" alt="corgi wanting a pizza slice"> 
+          <img src="images/pp2.jpg" alt="pug taking a big bite of pizza">
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Image used to open the lightbox -->
-<div class="row">
+
+<div class="laptop_images">
+  <div class='top'>
   <div class="column">
 
  <img src="images/pp5.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt = "pug dreaming of pizza">
  </div>
-</div>
-</div>
+
+
 
 
      
@@ -188,7 +220,8 @@
     <div class="column">
       <img class="demo" src="images/pp11.jpg" onclick="currentSlide(14)" alt="I can already taste the meaty pepperoni!">
     </div>
-  </div>
+
+</div>
 </div>
 
 			<div class="description">If you want to see more puppies eating pizza, this <a href="https://www.urdogs.com/16-dogs-who-are-clearly-obsessed-with-pizza/">site</a> has many cute pictures with hilarious captions. </div>
@@ -200,6 +233,8 @@
   <track src="audio_desc_en.vtt" kind="descriptions" srclang="en" label="english_description">
   <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
  </video>
+</div>
+</div>
 
 
 	<footer>
@@ -359,7 +394,19 @@ video.addEventListener(
 });
 
 </script>
-
+<script>
+  $('[tabindex]').focus(function()
+{
+    $(this).css('outline', 'none');
+});
+$('[tabindex]').keyup(function (event)
+{
+    if(event.keyCode == 9)
+    {
+        $(this).css('outline', '');
+    }
+});
+</script>
 </main>
 	</body>
 
