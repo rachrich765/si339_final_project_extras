@@ -973,8 +973,7 @@ padding-right: 50px;
 }}
 
 @media screen and (min-width:1200px){video {
-    width: 35%;
-    margin-bottom: 80px;
+    width:100%;
   }}
 
  @media only screen 
@@ -1172,4 +1171,15 @@ margin-right: 300px;
   and (orientation: portrait){.laptop_images{
     display: none;
     }}
+#video_player_box{ width:35%; background:#000; margin:0px auto;}
+#video_controls_bar{ background: #333; color:#CCC; font-size: 70px;text-align: center; }
+#seekslider{ width:400px; height:70px;margin-bottom: 50px;margin-top: 50px;}
+#volumeslider{margin-bottom: 50px;margin-top: 50px;}
+#playpausebtn, #mutebtn, #fullscreenbtn{
+margin-left: 800px;
+margin-right: 800px;
+margin-bottom: 50px;margin-top: 50px;
+
+}
+
 
