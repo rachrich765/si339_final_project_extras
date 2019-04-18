@@ -46,7 +46,7 @@ h1 {
   color: #0EAC6F;
   line-height: 100px;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 100px;
 
 }
 
@@ -288,7 +288,6 @@ footer a .fa-twitter-square  {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  padding-left:2px;
 }
 
 .topnav a {
@@ -296,9 +295,9 @@ footer a .fa-twitter-square  {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 54px 56px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -306,7 +305,7 @@ footer a .fa-twitter-square  {
   color: black;
 }
 
-.current {
+.active {
   background-color: #4CAF50;
   color: white;
 }
@@ -315,16 +314,23 @@ footer a .fa-twitter-square  {
   display: none;
 }
 
-/*@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+@media screen and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){ 
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+@media screen and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){
+  .topnav.responsive {position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -335,22 +341,18 @@ footer a .fa-twitter-square  {
     display: block;
     text-align: left;
   }
-}*/
+}
 /*laptop*/
-@media screen and (min-width:1200px) { .sticky {
+ .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 3%;
 }
+ .sticky a{
+font-size: 50px;
+padding-right: 50px;
 }
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 736px) 
-  and (orientation: portrait){.sticky {
-    display: none;
-  }
-}
-
 
 /*skip to content*/
 
@@ -373,16 +375,21 @@ footer a .fa-twitter-square  {
     top: 0;
     width: auto; 
     height: auto; 
+    overflow: visible; 
     z-index: 1;
     color: #FFFFFF;
     background-color: #F60909;
     font-size: 58px;
   }
 }
-  @media screen and (max-width:990px) {.skip-main {
+  @media screen and (max-width:768px) {.skip-main {
     display: none;
   }
   }
+  .current {
+  background-color: #4CAF50;
+  color: white;
+}
 /*flex layout east coast*/
 
 /*mobile / default*/
@@ -937,24 +944,12 @@ footer a .fa-twitter-square  {
   background-color: #ccc; 
 }
 
-@media screen and (min-width:1200px){.top{
-  margin-top: 200px;
-  padding-top: 100px;
-}
-}
-@media screen and (min-width:1200px){.top-ec{
-  margin-top: 200px;
-  padding-top: 200px;
-}
-}
-
 
 @media screen and (min-width:1200px){.flip-card {
       width: 1500px;
  height: 1500px;
    display: grid;
   float: left;
-    
     transition: transform 1s;
     transform-style: preserve-3d;
 }}
@@ -963,9 +958,8 @@ footer a .fa-twitter-square  {
     width: 1500px;
  height: 1500px;
     line-height: 60px;
-    color: white;
+    color: #DCEAE5;
     text-align: center;
-    font-weight: bold;
     font-size: 80px;
     position: absolute;
     backface-visibility: hidden;
@@ -975,19 +969,25 @@ footer a .fa-twitter-square  {
  height: 1500px;
 }}
 @media screen and (min-width:1200px){.flip-card-back {
-    background: blue;
+    background: #3B9275  ;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
 }}
+@media screen and (min-width:1200px){.flip-card-back h2 {
+  color: #EA9B13  ;
+    font-size:  150px;
+
+}}
+ @media screen and (min-width:1200px){.flip-card-back p{
+color:#DCEAE5 ;
+  font-size:  90px;
+  line-height: 120px;
+}}
 @media screen and (min-width:1200px){.flip-card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
 }
-
 
 @media screen and (min-width:1200px){.flip-card-h {
       width: 1500px;
@@ -998,28 +998,36 @@ footer a .fa-twitter-square  {
     transition: transform 1s;
     transform-style: preserve-3d;
 }}
+
 @media screen and (min-width:1200px){.flip-card-h  div {
     display: block;
     width: 1500px;
  height: 1500px;
-    line-height: 60px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 80px;
     position: absolute;
     backface-visibility: hidden;
 }}
+
 @media screen and (min-width:1200px){.flip-card-h-front img{
  width: 1500px;
  height: 1500px;
 }}
+
 @media screen and (min-width:1200px){.flip-card-h-back {
-    background: blue;
+    background: #3B9275;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
 }}
+ @media screen and (min-width:1200px){.flip-card-h-back h2{
+color:#EA9B13;
+  font-size:  150px;
+}}
+ @media screen and (min-width:1200px){.flip-card-h-back p{
+color:#DCEAE5 ;
+  font-size:  90px;
+  line-height: 120px;
+}}
+
 @media screen and (min-width:1200px){.flip-card-h.flipped {
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
@@ -1032,33 +1040,40 @@ footer a .fa-twitter-square  {
  height: 1500px;
    display: grid;
   float: left;
-    
     transition: transform 1s;
     transform-style: preserve-3d;
 }}
+
 @media screen and (min-width:1200px){.flip-card-a  div {
     display: block;
     width: 1500px;
  height: 1500px;
-    line-height: 60px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 80px;
+    color: #DCEAE5 ;
     position: absolute;
     backface-visibility: hidden;
 }}
+
 @media screen and (min-width:1200px){.flip-card-a-front img{
  width: 1500px;
  height: 1500px;
-}
-}
+}}
 
 @media screen and (min-width:1200px){.flip-card-a-back {
-    background: blue;
+    background:  #3B9275;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
+}}
+
+@media screen and (min-width:1200px){.flip-card-a-back h2{
+  color: #EA9B13;;
+  font-size:  150px;
+}}
+
+ @media screen and (min-width:1200px){.flip-card-a-back p{
+color:#DCEAE5 ;
+  font-size:  90px;
+  line-height: 120px;
 }}
 @media screen and (min-width:1200px){.flip-card-a.flipped {
     -webkit-transform: rotateY( 180deg );
@@ -1066,9 +1081,11 @@ footer a .fa-twitter-square  {
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }}
-@media screen and (min-width:1200px){button{
-font-size: 50px;
 
+@media screen and (min-width:1200px){button{
+font-size: 70px;
+margin-left: -300px;
+margin-right: 300px;
 }}
 
 
