@@ -937,7 +937,7 @@ footer a .fa-twitter-square  {
   background-color: #ccc; 
 }
 
-@media screen and (min-width:1200px){..top{
+@media screen and (min-width:1200px){.top{
   margin-top: 200px;
   padding-top: 100px;
 }
