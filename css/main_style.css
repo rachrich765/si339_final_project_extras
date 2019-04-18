@@ -315,7 +315,7 @@ footer a .fa-twitter-square  {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -335,14 +335,25 @@ footer a .fa-twitter-square  {
     display: block;
     text-align: left;
   }
-}
-.sticky {
+}*/
+/*laptop*/
+@media screen and (min-width:1200px) { .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){.sticky {
+    display: none;
+  }
+}
+
 
 /*skip to content*/
+
 @media screen and (min-width:1200px) {
   .skip-main {
     position: absolute;
@@ -368,6 +379,10 @@ footer a .fa-twitter-square  {
     font-size: 58px;
   }
 }
+  @media screen and (max-width:990px) {.skip-main {
+    display: none;
+  }
+  }
 /*flex layout east coast*/
 
 /*mobile / default*/
@@ -691,8 +706,18 @@ footer a .fa-twitter-square  {
 .column img {
   width: 35%;
 }
+ @media only screen 
+  and (max-device-width: 1024px) {
+    .modal-content{
+  display: none;
+  }}
+   @media only screen 
+  and (max-device-width: 1024px) {
+    .close {
+      display: none;
+      }}
 
-/* The Modal (background) */
+  @media only screen  and (min-device-width: 1200px)  {/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -705,9 +730,10 @@ footer a .fa-twitter-square  {
   overflow: auto;
   background-color: #000000;
 }
-
+}
 /* Modal Content */
-.modal-content {
+@media screen 
+  and (min-device-width: 1200px)  {.modal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -715,9 +741,11 @@ footer a .fa-twitter-square  {
   width: 100%;
   max-width: 2500px;
 }
+}
 
 /* The Close Button */
-.close {
+@media screen 
+  and (min-device-width: 1200px)  {.close {
   color: white;
   position: absolute;
   top: 10px;
@@ -725,21 +753,25 @@ footer a .fa-twitter-square  {
   font-size: 325px;
   font-weight: bold;
 }
-
-.close:hover,
+}
+@media screen 
+  and (min-device-width: 1200px)  {.close:hover,
 .close:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
 }
-
+}
 /* Hide the slides by default */
-.mySlides {
+@media screen 
+  and (min-device-width: 1200px) {.mySlides {
   display: none;
+}
 }
 
 /* Next & previous buttons */
-.prev,
+@media screen 
+  and (min-device-width: 1200px)  {.prev,
 .next {
   /*cursor: pointer;*/
   position: absolute;
@@ -754,108 +786,126 @@ footer a .fa-twitter-square  {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
-}
+}}
 
 /* Position the "next button" to the right */
-.next {
+@media screen 
+  and (min-device-width: 1200px)  {.next {
   right: -400px;
   border-radius: 3px 0 0 3px;
-}
-.prev {
+}}
+@media screen 
+  and (min-device-width: 1200px)  {.prev {
   left: -400px;
   border-radius: 3px 0 0 3px;
-}
+}}
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
+@media screen 
+  and (min-device-width: 1200px)  {.prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
+}}
 /* Number text (1/3 etc) */
-.numbertext {
+@media screen 
+  and (min-device-width: 1200px)  {.numbertext {
   color: #000000;
   font-size: 82px;
   padding: 12px 12px;
   top: 0;
-}
-.mySlides img {
+}}
+@media screen 
+  and (min-device-width: 1200px)  {.mySlides img {
   width: 2000px;
   height: 2000px;
-}
+}}
 
 /** Caption text */
-.caption-container {
+@media screen 
+  and (min-device-width: 1200px)  {.caption-container {
   text-align: center;
   background-color: black;
   padding: 100px 16px;
   color: white;
   font-size: 80px;
-}
+}}
 
-img.demo {
+@media screen 
+  and (min-device-width: 1200px)  {img.demo {
   display: none;
-}
+}}
 
 
-img.hover-shadow {
+@media screen 
+  and (min-device-width: 1200px)  {img.hover-shadow {
   transition: 0.3s;
-}
+}}
 
-.hover-shadow:hover {
+@media screen 
+  and (min-device-width: 1200px)  {.hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+}}
 
-.container {
+@media screen 
+  and (min-device-width: 1200px)  {.container {
   max-width: 1170px;
   margin: 0 auto;
-}
+}}
 .broadcast {
+  display: none;
+}
+@media screen and (min-width:1200px){.broadcast {
   color: #FFFFFF;
   display: flex;
   text-align: center;
   margin-top: -50px;
+}
+}
+@media screen and (min-width:1200px){.broadcast {
   background: #444;
   position: relative;
   font-weight: bold;
   font-size: 45px;
 }
-.broadcast a {
+}
+@media screen and (min-width:1200px){.broadcast a {
   color: #f3b823;
   text-decoration: none;
-
 }
-.broadcast .hide-broadcast {
+}
+@media screen and (min-width:1200px){.broadcast .hide-broadcast {
   position: absolute;
   right: 20px;
-}
-.broadcast .hide-broadcast svg {
+}}
+@media screen and (min-width:1200px){.broadcast .hide-broadcast svg {
   fill: #FFFFFF;
   width: 100px;
   height: 100px;
   position: relative;
-
 }
-.broadcast .hide-broadcast .hide-broadcast-target {
+}
+@media screen and (min-width:1200px){.broadcast .hide-broadcast .hide-broadcast-target {
   width: 240px;
   height: 240px;
   display: inline-block;
   border-radius: 50%;
   transition: all ease 0.3s;
 
-}
-.broadcast .hide-broadcast:hover .hide-broadcast-target {
-  background: rgba(255, 255, 255, .9);
-}
-.broadcast .hide-broadcast:hover .hide-broadcast-target svg {
-  fill: #444;
-}
-video {
+}}
+
+@media screen and (min-width:1200px){video {
     width: 35%;
     margin-bottom: 80px;
-  }
+  }}
 
-  .accordion {
-  /*background-color: #eee;*/
+ @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){ .accordion {
+    display: none;
+  }
+}
+ .accordion { /*background-color: #eee;*/
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -887,17 +937,19 @@ video {
   background-color: #ccc; 
 }
 
-.top{
+@media screen and (min-width:1200px){..top{
   margin-top: 200px;
   padding-top: 100px;
 }
-.top-ec{
+}
+@media screen and (min-width:1200px){.top-ec{
   margin-top: 200px;
   padding-top: 200px;
 }
+}
 
 
-.flip-card {
+@media screen and (min-width:1200px){.flip-card {
       width: 1500px;
  height: 1500px;
    display: grid;
@@ -905,8 +957,8 @@ video {
     
     transition: transform 1s;
     transform-style: preserve-3d;
-}
-.flip-card  div {
+}}
+@media screen and (min-width:1200px){.flip-card  div {
     display: block;
     width: 1500px;
  height: 1500px;
@@ -917,27 +969,27 @@ video {
     font-size: 80px;
     position: absolute;
     backface-visibility: hidden;
-}
-.flip-card-front img{
+}}
+@media screen and (min-width:1200px){.flip-card-front img{
  width: 1500px;
  height: 1500px;
-}
-.flip-card-back {
+}}
+@media screen and (min-width:1200px){.flip-card-back {
     background: blue;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
-}
-.flip-card.flipped {
+}}
+@media screen and (min-width:1200px){.flip-card.flipped {
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
+}
 
 
-
-.flip-card-h {
+@media screen and (min-width:1200px){.flip-card-h {
       width: 1500px;
  height: 1500px;
    display: grid;
@@ -945,8 +997,8 @@ video {
     
     transition: transform 1s;
     transform-style: preserve-3d;
-}
-.flip-card-h  div {
+}}
+@media screen and (min-width:1200px){.flip-card-h  div {
     display: block;
     width: 1500px;
  height: 1500px;
@@ -957,25 +1009,25 @@ video {
     font-size: 80px;
     position: absolute;
     backface-visibility: hidden;
-}
-.flip-card-h-front img{
+}}
+@media screen and (min-width:1200px){.flip-card-h-front img{
  width: 1500px;
  height: 1500px;
-}
-.flip-card-h-back {
+}}
+@media screen and (min-width:1200px){.flip-card-h-back {
     background: blue;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
-}
-.flip-card-h.flipped {
+}}
+@media screen and (min-width:1200px){.flip-card-h.flipped {
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
-}
+}}
 
-.flip-card-a {
+@media screen and (min-width:1200px){.flip-card-a {
       width: 1500px;
  height: 1500px;
    display: grid;
@@ -983,8 +1035,8 @@ video {
     
     transition: transform 1s;
     transform-style: preserve-3d;
-}
-.flip-card-a  div {
+}}
+@media screen and (min-width:1200px){.flip-card-a  div {
     display: block;
     width: 1500px;
  height: 1500px;
@@ -995,28 +1047,28 @@ video {
     font-size: 80px;
     position: absolute;
     backface-visibility: hidden;
-}
-.flip-card-a-front img{
+}}
+@media screen and (min-width:1200px){.flip-card-a-front img{
  width: 1500px;
  height: 1500px;
-
+}
 }
 
-.flip-card-a-back {
+@media screen and (min-width:1200px){.flip-card-a-back {
     background: blue;
     transform: rotateY( 180deg );
     width: 1500px;
  height: 1500px;
-}
-.flip-card-a.flipped {
+}}
+@media screen and (min-width:1200px){.flip-card-a.flipped {
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
-}
-button{
+}}
+@media screen and (min-width:1200px){button{
 font-size: 50px;
 
-}
+}}
 
 
