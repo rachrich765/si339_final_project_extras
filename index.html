@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/main_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link href="path/to/lightbox.css" rel="stylesheet">
 	<title>A Pizza Lover's Guide to the United States</title>
 </head>
 
@@ -15,12 +14,12 @@
 	<a class="skip-main" href="#content">Skip to main content</a>
 	<header>
 		<div class="topnav" id="myTopnav">
-				<a class="current" href="javascript:void(0)">Home</a>
+				<a class="current">Home</a>
 				<a href="east_coast_pizza.html">East Coast Pizza</a>
 				<a href="midwest_pizza.html">Midwest Pizza</a>
 				<a href="southern_pizza.html">Southern Pizza</a>
 				<a href="about_the_contributors.html">Contributors</a>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<a class="icon" href="javascript:void(0);" onclick="myFunction()">
 					<i class="fa fa-bars"></i>
 				</a>
 			</div>
@@ -266,18 +265,33 @@ function myFunction() {
 }
 </script>
 <script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("myTopnav");
-var sticky = navbar.offsetTop;
-
 function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+function myFunction(x) {
+  var navbar = document.getElementById("myTopnav");
+var sticky = navbar.offsetTop;
+  if (x.matches) { // If media query matches
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-  } else {
+  }
+  }
+   else {
     navbar.classList.remove("sticky");
   }
 }
+
+var x = window.matchMedia("(min-width: 1200px)")
+
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 </script>
 <script>
 
@@ -309,24 +323,6 @@ video.addEventListener(
         video.pause();
       }
     };
-
-    //   var pausevid = document.getElementById('myVideo').pause();
-// Event listener for the mute button
-muteButton.addEventListener("click", function() {
-  if (video.muted == false) {
-    // Mute the video
-    video.muted = true;
-
-    // Update the button text
-    muteButton.innerHTML = "Unmute";
-  } else {
-    // Unmute the video
-    video.muted = false;
-
-    // Update the button text
-    muteButton.innerHTML = "Mute";
-  }
-});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded',function(event){

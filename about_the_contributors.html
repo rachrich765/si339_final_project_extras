@@ -18,8 +18,8 @@
 				<a href="east_coast_pizza.html">East Coast Pizza</a>
 				<a href="midwest_pizza.html">Midwest Pizza</a>
 				<a href="southern_pizza.html">Southern Pizza</a>
-				<a class="current" href="javascript:void(0)">Contributors</a>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<a class="current">Contributors</a>
+				<a  class="icon" href="javascript:void(0);" onclick="myFunction2()">
 					<i class="fa fa-bars"></i>
 				</a>
 			</div>
@@ -36,8 +36,8 @@
     <div class="flip-card-front"><img src = "images/contributors/rachel.JPG" alt ="Rachel"/></div>
     <div class="flip-card-back">
 					<h2>Rachel</h2> 
-					<p><b>Current endeavor:</b> Senior @ University of Michigan</p> 
-					<p><b>Interests:</b> "Brooklyn Nine-Nine", baseball, creating playlists </p>
+					<p><b>Current endeavor:</b> Senior @ University of Michigan</p> <br>
+					<p><b>Interests:</b> "Brooklyn Nine-Nine", baseball, creating playlists </p><br>
 					<p><b>Future endeavors:</b> Masters in Management @ Ross </p>
 				</div>
 			</div>
@@ -52,8 +52,8 @@
     <div class="flip-card-h-front"><img src = "images/contributors/harry.JPG" alt ="Harry"/></div>
     <div class="flip-card-h-back">
 					<h2>Harry</h2> 
-					<p><b>Current endeavor:</b> Junior @ University of Michigan</p> 
-					<p><b>Interests:</b> "Brooklyn Nine-Nine", New York sports teams, Super Smash Bros</p>
+					<p><b>Current endeavor:</b> Junior @ University of Michigan</p> <br>
+					<p><b>Interests:</b> "Brooklyn Nine-Nine", New York sports teams, Super Smash Bros</p><br>
 					<p><b>Future endeavors:</b> Software Development Internship @ EY </p>
 				</div>
 			</div>
@@ -70,30 +70,14 @@
     <div class="flip-card-a-front"><img src = "images/contributors/ap.jpg"  alt ="Alex"/></div>
     <div class="flip-card-a-back">
 					<h2>Alex</h2> 
-					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> 
-					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p>
+					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> <br>
+					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p><br>
 					<p><b>Future endeavors:</b> Software Developer in NYC </p>
 				</div>
 			</div>
 			</div>
 	
 </section>
-
-		<!-- 
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src = "images/contributors/ap.jpg"  alt ="Alex"/>
-				</div>
-				<div class="flip-card-back">
-					<h2>Alex</h2> 
-					<p><b>Current endeavor:</b> Working @ Thomson Reuters </p> 
-					<p><b>Interests:</b> Musical theater, bar trivia, Mario Kart</p>
-					<p><b>Future endeavors:</b> Software Developer in NYC </p>
-			</div>
-			</div>
-		</div>
-	</section>= -->
 	</main>
 
 	<footer>
@@ -104,7 +88,7 @@
 		<script  src="jquery.js">
   </script>
 	<script>
-function myFunction() {
+function myFunction2() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -114,16 +98,23 @@ function myFunction() {
 }
 </script>
 <script>
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementById("myTopnav");
+function myFunction(x) {
+	var navbar = document.getElementById("myTopnav");
 var sticky = navbar.offsetTop;
-function myFunction() {
+  if (x.matches) { // If media query matches
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-  } else {
+  }
+  }
+   else {
     navbar.classList.remove("sticky");
   }
 }
+
+var x = window.matchMedia("(min-width: 1200px)")
+
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 </script>
 <script>
 	document.addEventListener('DOMContentLoaded',function(event){

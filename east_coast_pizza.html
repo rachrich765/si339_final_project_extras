@@ -19,7 +19,7 @@
 				<a href="midwest_pizza.html">Midwest Pizza</a>
 				<a href="southern_pizza.html">Southern Pizza</a>
 				<a href="about_the_contributors.html">Contributors</a>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<a href="javascript:void(0);" class="icon" onclick="myFunction2()">
 					<i class="fa fa-bars"></i>
 				</a>
 			</div>
@@ -119,7 +119,7 @@
 		<a href="https://open.spotify.com/user/4rocks32?si=kuVCymlZSuGELP9fYWPQOQ"><i class="fab fa-spotify" aria-label="Spotify"></i></a>
 	</footer>
 	<script>
-function myFunction() {
+function myFunction2() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -129,18 +129,23 @@ function myFunction() {
 }
 </script>
 <script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("myTopnav");
+function myFunction(x) {
+	var navbar = document.getElementById("myTopnav");
 var sticky = navbar.offsetTop;
-
-function myFunction() {
+  if (x.matches) { // If media query matches
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-  } else {
+  }
+  }
+   else {
     navbar.classList.remove("sticky");
   }
 }
+
+var x = window.matchMedia("(min-width: 1200px)")
+
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 </script>
 <script>
 	document.addEventListener('DOMContentLoaded',function(event){
