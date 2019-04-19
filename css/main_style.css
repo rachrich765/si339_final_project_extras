@@ -1389,26 +1389,29 @@ margin-bottom: 50px;margin-top: 50px;
 }
 }
 
-.callout {
+@media only screen and (min-width:1200px){.callout {
   position: fixed;                    
   margin-left: 1220px;
   width: 700px;
   font-size: 50px;
+}}
 
-
-}
-
-.callout-header {
+@media only screen and (min-width:1200px){.callout-header {
   padding: 25px 15px;
   background: #555;
   font-size: 50px;
   color: #FFFFFF;
   margin-bottom: -20px;
   margin-top: 30px;
-}
+}}
 
-.callout-container {
+@media only screen and (min-width:1200px){.callout-container {
   padding: 5px;
   background-color: #82071B;
   color: #FFFFFF;
-}
+}}
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait){.callout {
+display: none;
+}}
