@@ -344,7 +344,7 @@ footer a .fa-twitter-square  {
 .topnav a {
   float: left;
   display: block;
-  color: #F5F6F9;
+  color: #FFFFFF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -450,7 +450,7 @@ padding-right: 50px;
   }
   }
   .current {
-  background-color: #7F88F3;
+  background-color: #071582;
   color: white;
 }
 /*flex layout east coast*/
