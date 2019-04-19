@@ -31,10 +31,22 @@
 
 <main id="content" tabindex="-1">
 		<div class="description">Hailing from Grand Rapids, Michigan, the vast majority of pizza's that I've sampled have been from the Midwest, so this section is more complete than the rest.</div>
+<select id="myDropdown" onchange="filterContent();">
+	<option value="A">All content</option>
+	<option value="B">5 Star Taste Rating</option>
+	<option value="C">4 Star Taste Rating</option>
+	<option value="D">3 Star Taste Rating</option>
+	<option value="E">5 Star Crust Rating</option>
+	<option value="F">4 Star Crust Rating</option>
+	<option value="G">3 Star Crust Rating</option>
+	<option value="H">5 Star Dough Rating</option>
+	<option value="I">4 Star Dough Rating</option>
+	<option value="J">3 Star Dough Rating</option>
+</select>
 <section class="columns">
 <div class="column-h">
 
-			<h2 class='top'>1. <a href = "http://maniosteria.com/"> Mani Osteria & Bar</a> <br>Ann Arbor, Michigan</h2>
+			<div class="5D"><div class="5C"><div class="5T"><h2 class='top'>1. <a href = "http://maniosteria.com/"> Mani Osteria & Bar</a> <br>Ann Arbor, Michigan</h2>
 			<p>Mani Osteria won the honor of MLive's annoual 'Michigan’s Best Pizza' competition in 2013, and still reins supreme. Their wood fired ovens give customers the signatiure flaky crust of traditional <a href="https://mymidici.com/midici/what-is-neapolitan-pizza/">Neapolitan style</a> pizza. The toppings are absolutely delicious, with each pre-designed pizza full of ingredients that are both authentic yet innoviate.</p>
 				<img src = "images/Midwest_Pizza/mo_pizza.jpg" alt ="mo_pizza"/>  
 			<figure>
@@ -45,9 +57,12 @@
 				</figcaption>
 			</figure>
 		</div>
+		</div>
+	</div>
+</div>
 
 		<div class="column-h">
-			<h2 class='top'>2. <a href="https://giordanos.com/"> Giordano's</a> <br> Chicago, Illinois</h2>
+			<div class="5T"><div class="4D"><div class="5C"><h2 class='top'>2. <a href="https://giordanos.com/"> Giordano's</a> <br> Chicago, Illinois</h2>
 			<p>In terms of authentic <a href="https://en.wikipedia.org/wiki/Chicago-style_pizza">Chicago style</a> pizza, there truly isn't a place that does it better than Giordano's. Despie being packed full of fresh and delicious cheese, veggies, and meats, the dough and crust maintain a firm structure.</p>
 				<img src = "images/Midwest_Pizza/g_pizza.jpg" alt ="g_pizza"/> 
 			<figure>
@@ -58,13 +73,15 @@
 				</figcaption>
 			</figure>
 			</div>
+			</div>
+		</div>
+	</div>
 		</section>
 
 
-<!-- <section class="columns"> -->
 	<section class="columns">
 	<div class="column-h">
-		<h2>3.<a href="http://www.jollypumpkin.com/jp/landing-page.html"> Jolly Pumpkin</a> <br> Old Mission Peninsula, Michigan</h2>
+		<div class="3T"><div class="5D"><div class="4C"><h2>3.<a href="http://www.jollypumpkin.com/jp/landing-page.html"> Jolly Pumpkin</a> <br> Old Mission Peninsula, Michigan</h2>
 			<p>Jolly Pumpkin is one of the few places where the dough actually tastes like it's made daily. The dough also has a uniquely delicious flavor from being infused with lots of handcrafted beer and then cooked on a marble slab. The toppings are satisfactory, but truly inferior to the dough and crust.</p>
 				<img src = "images/Midwest_Pizza/jpp.jpg" alt ="jp_pizza"/> 
 			<figure>
@@ -74,10 +91,13 @@
 					<b>Crust:</b> <i class="fas fa-pizza-slice"></i> <i class="fas fa-pizza-slice"></i> <i class="fas fa-pizza-slice"></i> <i class="fas fa-pizza-slice"></i> <i class="fas fa-pizza-slice"></i>
 				</figcaption>
 			</figure>
-			</div>		
+			</div>	
+			</div>
+			</div>
+			</div>	
 	
 	<div class="column-h">
-		<h2>4. <a href="http://www.oliverasrestaurant.com/"> Olivera's Restaurant</a> <br> Portland, Michigan</h2>
+		<div class="4T"><div class="4D"><div class="5C"><h2>4. <a href="http://www.oliverasrestaurant.com/"> Olivera's Restaurant</a> <br> Portland, Michigan</h2>
 			<p>One of my favorie part of my family's summer reunions at my aunt and uncle's house is the family trip to Olivera's. Since I am not a huge fan of pizza sauce, Olivera's pizza has a special place in my heart. The pepperonis have a nice spiciness and crunch to them. Unfortuanetly, the cheese is fairly bland and gooey.</p>
 				<img src = "images/Midwest_Pizza/oliveraspizza.jpg" alt ="o_pizza"/>
 			<figure>
@@ -88,11 +108,14 @@
 				</figcaption>
 			</figure>
 			</div>
+		</div>
+	</div>
+</div>
 		</section>
 		
 			<section class="columns">	
 	<div class="column-h">
-		<h2>5. <a href="http://www.jtspizza.com/"> JT's Pizza & Spirits</a> <br>Grand Rapids, Michigan</h2>
+		<div class="5T"><div class="3D"><div class="3C"><h2>5. <a href="http://www.jtspizza.com/"> JT's Pizza & Spirits</a> <br>Grand Rapids, Michigan</h2>
 			<p>JT's has a much more small-town pizza place feel,which makes the atmosphere fun, but the pizza only average. The toppings are always fresh and tasty; however, the crust is usually a little tough to each, and the dough is usually a little on the soggy side.</p>
 				<img src = "images/Midwest_Pizza/jtp.jpg" alt ="jt_pizza"/> 
 			<figure>
@@ -104,6 +127,9 @@
 				</figcaption>
 			</figure>
 			</div>
+		</div>
+	</div>
+</div>
 			</section>	
 		
 </main>
@@ -187,6 +213,150 @@ x.addListener(myFunction) // Attach listener function on state changes
 });
 
 </script>
+<script>
+	function filterContent() {
+		var list3t = document.getElementsByClassName('3T');
+		var list4t = document.getElementsByClassName('4T');
+		var list5t = document.getElementsByClassName('5T');
+		var list3c = document.getElementsByClassName('3C');
+		var list4c = document.getElementsByClassName('4C');
+		var list5c = document.getElementsByClassName('5C');
+		var list3d = document.getElementsByClassName('3D');
+		var list4d = document.getElementsByClassName('4D');
+		var list5d = document.getElementsByClassName('5D');
+	var user = document.getElementById("myDropdown").value;
+	// 5 star taste rating
+	if(user=="B") {
+		
+		for (var i = 0; i < list3t.length; i++) {
+			list3t[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4t.length; i++) {
+			list4t[i].style.display = 'none';
+	}
+}
+// 4 star taste rating
+	else if(user=="C") {
+		
+		for (var i = 0; i < list5t.length; i++) {
+			list5t[i].style.display = 'none';
+		}
+		for (var i = 0; i < list3t.length; i++) {
+			list3t[i].style.display = 'none';
+	}
+}
+// 3 star taste rating
+else if (user=="D"){
+	for (var i = 0; i < list5t.length; i++) {
+			list5t[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4t.length; i++) {
+			list4t[i].style.display = 'none';
+	}
 
+}
+// 5 star crust rating
+else if (user=="E"){
+	for (var i = 0; i < list3c.length; i++) {
+			list3c[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4c.length; i++) {
+			list4c[i].style.display = 'none';
+	}
+
+}
+// 4 star crust rating
+	else if(user=="F") {
+		
+		for (var i = 0; i < list5c.length; i++) {
+			list5c[i].style.display = 'none';
+		}
+		for (var i = 0; i < list3c.length; i++) {
+			list3c[i].style.display = 'none';
+
+}
+}
+//  3 star crust rating
+else if (user=="G"){
+	for (var i = 0; i < list5c.length; i++) {
+			list5c[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4c.length; i++) {
+			list4c[i].style.display = 'none';
+	}
+
+}
+// 5 star dough rating
+else if (user=="H"){
+	for (var i = 0; i < list3d.length; i++) {
+			list3d[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4d.length; i++) {
+			list4d[i].style.display = 'none';
+	}
+
+}
+// 4 star dough rating
+	else if(user=="I") {
+		
+		for (var i = 0; i < list5d.length; i++) {
+			list5d[i].style.display = 'none';
+		}
+		for (var i = 0; i < list3d.length; i++) {
+			list3d[i].style.display = 'none';
+
+}
+}
+//  3 star dough rating
+else if (user=="J"){
+	for (var i = 0; i < list5d.length; i++) {
+			list5d[i].style.display = 'none';
+		}
+		for (var i = 0; i < list4d.length; i++) {
+			list4d[i].style.display = 'none';
+	}
+
+}
+else if (user=='A'){
+	for (var i = 0; i < list5d.length; i++) {
+			list5d[i].style.display = 'block';
+		}
+		for (var i = 0; i < list4d.length; i++) {
+			list4d[i].style.display = 'block';
+		}
+			for (var i = 0; i < list3d.length; i++) {
+			list3d[i].style.display = 'block';
+		}
+	for (var i = 0; i < list5c.length; i++) {
+			list5c[i].style.display = 'block';
+		}
+		for (var i = 0; i < list4c.length; i++) {
+			list4c[i].style.display = 'block';
+	}
+			for (var i = 0; i < list3c.length; i++) {
+			list3c[i].style.display = 'block';
+
+}
+	for (var i = 0; i < list5t.length; i++) {
+			list5t[i].style.display = 'block';
+		}
+		for (var i = 0; i < list4t.length; i++) {
+			list4t[i].style.display = 'block';
+	}
+		for (var i = 0; i < list3t.length; i++) {
+			list3t[i].style.display = 'block';
+	}
+
+}
+}
+
+
+  // this will remove the node from the page
+  
+
+  // if you just want to hide it, you can do this:
+  
+
+</script>
 </body>
 </html>
