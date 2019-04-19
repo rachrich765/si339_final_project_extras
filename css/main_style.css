@@ -169,10 +169,7 @@ font-size: 45px;
   }
 }
 
-.column-al h3 a {
-  color : #1D2AC2;
-font-size: 25px;
-}
+
 
 nav{
   margin-bottom: 30px;
@@ -638,19 +635,47 @@ padding-right: 50px;
   margin-bottom: 20px;
   line-height: 30px;
 }
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait){
+    .column-al h3 {
+  font-size: 45px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 50px;
+}}
+@media screen and (min-width: 1200px) { 
+  .column-al h3 {
+    margin-top: 50px;
+    color: #E12626;
+    font-size: 72px; 
+    line-height: 85px;
+    margin-bottom: 50px;
+  }
+}
+.column-al h3 a {
+  color : #1D2AC2;
+font-size: 25px;
+}
 @media screen and (min-width: 1200px) {
-    .column-al h3 a{
+  .column-al h3 a{
   font-size: 75px;
   margin-top: 10px;
   margin-bottom: 20px;
   line-height: 50px;
+}}
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait){
+    .column-al h3 a {
+font-size: 45px;
 }}
 .column-al h2 {
        font-size: 35px;
   margin-top: 10px;
   margin-bottom: 20px;
   line-height: 50px;
-  }}
+  }
 @media screen and (min-width: 1200px) {
     .column-al h2 {
        font-size: 75px;
@@ -669,7 +694,12 @@ padding-right: 50px;
       text-align:center;
     }
 }
-
+@media screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait){
+    .column-al h2 a {
+font-size: 45px;
+}}
 /*mobile / default*/
 .column-h img{
  width: 195px;
