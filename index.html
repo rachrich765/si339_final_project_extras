@@ -33,8 +33,13 @@
 
 		</header>
 		<main id="content" tabindex="-1">
-		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite pictures that can be viewed as a slideshow below. </div>
-    
+		<div class="description">My name is Rachel Richardson, and I have absolutely loved pizza ever since I was old enough to eat it. Every time I travel, I make an effort to try a slice of pizza from at least one restaurant in that area. I haven't yet ventured to most of the United States, I have also solicited pizza reviews from my closest friends. Each pizza is ranked on a scale of 1-5, based on overall taste, quality of the dough, and quality of the crust. Finally, since the only thing better than eating pizza is watching cute puppies devour it, I've included some of my favorite pictures below. </div>
+    <div class="callout">
+  <div class="callout-header">More content available at the right!</div>
+  <div class="callout-container">
+    <p>Click on the cute picture of a pug snuggling with pizza to view a slideshow with more puppies eating pizza! </p>
+  </div>
+</div>
       <div class="mobile_images">
 <div class="row"> 
         <div class="column">      
@@ -264,12 +269,6 @@ function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        document.getElementById('myModal').style.display = "none";
-    }
-};
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -469,6 +468,9 @@ function checkKey(e) {
       plusSlides(1)
         // right arrow
     }
+    else if (e.keyCode == 27) {
+        document.getElementById('myModal').style.display = "none";
+}
 }
 </script>
 </main>
