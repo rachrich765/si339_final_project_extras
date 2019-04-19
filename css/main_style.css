@@ -1247,7 +1247,7 @@ margin-right: 300px;
 }}
 
  @media only screen 
-  and (max-device-width: 768px) 
+  and (max-device-width: 1024px) 
   and (orientation: portrait){.laptop_images{
     display: none;
     }}
@@ -1301,15 +1301,90 @@ margin-bottom: 50px;margin-top: 50px;
   background-color: #666;
   color: white;
 }
-@media screen and (min-width:1200px){#myDropdown {
+@media only screen and (min-width:1200px){#myDropdown {
   height: 200px;
   font-size: 50px;
 }`
 }
  @media only screen 
-  and (max-device-width: 768px) 
+  and (max-device-width: 1024px) 
   and (orientation: portrait){
     #myDropdown{
+  display: none;
+}
+}
+
+ /*flex layout contributors*/
+
+/*ipad*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)and (orientation: portrait) {
+    .item-c p{
+      margin-right: 15px;
+      margin-left: 15px;
+      font-size: 32px;
+      margin-bottom: 12px;
+  }
+}
+
+/*mobile*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){
+    .item-c p{
+      margin-right: 13px;
+      margin-left: 13px;
+      font-size: 15px;
+      margin-bottom: 12px;
+      line-height: 17px;
+  }
+}
+
+/*ipad*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)and (orientation: portrait) {
+    .item-c-heading{
+      margin-top: 3px;
+      margin-bottom:10px;
+  }
+}
+
+
+/*ipad*/
+@media  only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) and (orientation: portrait) {
+    .item-c img{
+      width: 380px;
+      height:580px;
+      margin-bottom: -12px;
+  }
+}
+
+/*mobile*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait){
+    .item-c img{
+      width: 180px;
+      height:280px;
+      margin-bottom: -12px;
+  }
+}
+
+/*laptop*/
+
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait){
+    .desktop_layout_c{
+  display: none;
+  }}
+@media only screen and (min-width:1200px){.mobile_layout_c{
   display: none;
 }
 }
