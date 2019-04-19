@@ -98,17 +98,6 @@ h2 {
     line-height: 75px;
   }
 }
-h2 a {
-  color : #1D2AC2;
-font-size: 25px;
-}
- @media screen and (min-width:1200px) { 
-  h2 a {
-    color: #1D2AC2;
-    font-size: 85px;
-    line-height: 90px;
-    }}
-
 /*ipad*/
 @media screen 
   and (min-device-width: 768px) 
@@ -121,6 +110,18 @@ font-size: 25px;
     line-height: 95px;
   }
 }
+
+h2 a {
+  color : #1D2AC2;
+font-size: 25px;
+}
+ @media screen and (min-width:1200px) { 
+  h2 a {
+    color: #1D2AC2;
+    font-size: 85px;
+    line-height: 90px;
+    }}
+
 
 
 /*mobile*/
@@ -142,7 +143,7 @@ font-size: 45px;
       font-size: 65px;
       margin-bottom: 5px;
 }}
-h3 {
+.column-h h3 {
   color: #E12626;
   font-size: 25px;
   margin-top: 20px;
@@ -152,14 +153,14 @@ h3 {
 @media screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) and (orientation: portrait){
-    h3 {
+    .column-h h3 {
   font-size: 45px;
   margin-top: 10px;
   margin-bottom: 20px;
   line-height: 50px;
 }}
 @media screen and (min-width: 1200px) { 
-  h3 {
+  .column-h h3 {
     margin-top: 50px;
     color: #E12626;
     font-size: 72px; 
@@ -168,10 +169,10 @@ h3 {
   }
 }
 
-@media screen and (min-width: 1200px) { 
-  h3 a{
-     font-size: 75px; 
-}}
+.column-al h3 a {
+  color : #1D2AC2;
+font-size: 25px;
+}
 
 nav{
   margin-bottom: 30px;
@@ -630,12 +631,13 @@ padding-right: 50px;
     margin-bottom: 50px;
 }
 }
-    .column-al h3 {
-  font-size: 75px;
-  margin-top: 10px;
+ .column-al h3 {
+  color: #E12626;
+  font-size: 25px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  line-height: 80px;
-}}
+  line-height: 30px;
+}
 @media screen and (min-width: 1200px) {
     .column-al h3 a{
   font-size: 75px;
@@ -643,7 +645,12 @@ padding-right: 50px;
   margin-bottom: 20px;
   line-height: 50px;
 }}
-
+.column-al h2 {
+       font-size: 35px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 50px;
+  }}
 @media screen and (min-width: 1200px) {
     .column-al h2 {
        font-size: 75px;
