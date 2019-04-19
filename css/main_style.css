@@ -1388,3 +1388,27 @@ margin-bottom: 50px;margin-top: 50px;
   display: none;
 }
 }
+
+.callout {
+  position: fixed;                    
+  margin-left: 1220px;
+  width: 700px;
+  font-size: 50px;
+
+
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 50px;
+  color: #FFFFFF;
+  margin-bottom: -20px;
+  margin-top: 30px;
+}
+
+.callout-container {
+  padding: 5px;
+  background-color: #82071B;
+  color: #FFFFFF;
+}
