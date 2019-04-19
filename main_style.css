@@ -617,6 +617,13 @@ padding-right: 50px;
   line-height: 50px;
 }}
 
+@media screen and (min-width: 1200px) {
+    .column-al h2 {
+       font-size: 75px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 50px;
+  }}
 /*ipad*/
 @media screen 
   and (min-device-width: 768px) 
@@ -1268,7 +1275,7 @@ margin-bottom: 50px;margin-top: 50px;
   color: white;
 }
 #myDropdown{
-  height: 200px;
+  height: 500px;
   font-size: 50px;
 
 }
@@ -1277,5 +1284,5 @@ margin-bottom: 50px;margin-top: 50px;
   and (orientation: portrait){
     #myDropdown{
   display: none;
-
+}
 }
